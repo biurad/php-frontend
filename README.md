@@ -1,6 +1,6 @@
 # Application Skeleton for [PHP-Rade] 👊
 
-This is a skeleton application for creating applications using [PHP-Rade]. It is pre-configured, clean and easy to use. If you interested, you might check out our demo applications:
+This is a skeleton application for creating applications using [PHP-Rade]. It is pre-configured with Tailwind, Typescript and React support using Symfony's Encore, If you interested, you might check out our demo applications:
 
 * [Distributed Chat App][] - This application implements an simple and real-time messaging system in PHP.
 * [Symfony Like Blog App][] - This application is a simple and a [symfony's demo][] like application.
