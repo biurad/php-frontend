@@ -20,28 +20,30 @@ use Rade\DI\Extensions;
 return [
     [
         [Extensions\CoreExtension::class, [__DIR__ . '/../']],
-        Extensions\Symfony\CacheExtension::class,
+        //Extensions\Symfony\EventDispatcherExtension::class,
+        //Extensions\Symfony\CacheExtension::class,
         //Extensions\AnnotationExtension::class,
         //Extensions\TemplateExtension::class,
         Extensions\Symfony\ConsoleExtension::class,
     ],
     [
         'core' => [
-            'events_dispatcher' => Symfony\Component\EventDispatcher\EventDispatcher::class,
+            'var_path' => '%project_dir%/var',
+            //'events_dispatcher' => Symfony\Component\EventDispatcher\EventDispatcher::class,
         ],
         'config' => [
             'locale' => 'en',
-            'paths' => ['%project_dir%/app/config', '%project_dir%/resources/config'],
+            'paths' => ['%project_dir%/resources/config'],
         ],
         'cache' => [
-            'directory' => '%project_dir%/var/cache',
+            'directory' => '%project.var_dir%/cache',
         ],
         //'annotation' => [
         //    'resources' => ['%project_dir%/app/Handlers'],
         //],
         //'templating' => [
-        //    'cache_dir' => '%project.cache_dir%',
-        //    'paths' => '%project_dir%/resources/views',
+        //    'cache_dir' => '%project.var_dir%/views',
+        //    'paths' => '%project_dir%/resources/templates',
         //    'renders' => [
         //        Biurad\UI\Renders\PhpNativeRender::class => ['php', 'phtml'],
         //        Biurad\UI\Renders\LatteRender::class,
@@ -53,11 +55,11 @@ return [
         //    ],
         //    'session' => [
         //        'enabled' => true,
-        //        'save_path' => '%project.cache_dir%/sessions',
+        //        'save_path' => '%project.var_dir%/sessions',
         //    ],
         //],
         'routing' => [
-            //'cache' => '%project.cache_dir%/load_CachedRoutes.php',
+            //'cache' => '%project.var_dir%/app/load_CachedRoutes.php',
             'pipes' => [
                 //Biurad\Http\Middlewares\ContentTypeOptionsMiddleware::class,
                 //Biurad\Http\Middlewares\ContentLengthMiddleware::class,
