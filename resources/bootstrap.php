@@ -24,11 +24,10 @@ return [
         //Extensions\Symfony\CacheExtension::class,
         //Extensions\AnnotationExtension::class,
         //Extensions\TemplateExtension::class,
-        Extensions\Symfony\ConsoleExtension::class,
     ],
     [
         'core' => [
-            'var_path' => '%project_dir%/var',
+            //'var_path' => '%project_dir%/var',
             //'events_dispatcher' => Symfony\Component\EventDispatcher\EventDispatcher::class,
         ],
         'config' => [
