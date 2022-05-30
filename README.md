@@ -32,7 +32,8 @@ For getting started with this project or contributing, you have to follow the be
 git clone https://github.com/biurad/php-framework.git
 cd php-framework
 
-composer install
+# Default packages in composer.lock maybe not be compatible with your PHP version.
+composer update
 ```
 
 OR
@@ -51,7 +52,11 @@ $ php -S 127.0.0.1:8000 -t public
 $ composer run --timeout 0 serve
 ```
 
-> Before running the built in server, cd into your project directory then run the script
+To update the project directory's structure to the latest version, run the following command:
+
+```sh
+php rade self-update
+```
 
 ## 📓 Documentation
 

@@ -1,5 +1,5 @@
 {
-    "name": "biurad/frontend",
+    "name": "biurad/framework",
     "description": "PHP Rade Framework is a high performance framework with expressive, elegant syntax, and maintainable",
     "keywords": ["biurad","psr-standard","psr-7","psr-14","psr-11","psr-15","psr-17","php","php framework"],
     "type": "project",
@@ -42,7 +42,7 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "src/"
         }
     },
     "autoload-dev": {
@@ -51,7 +51,6 @@
         }
     },
     "suggest": {
-      "biurad/templating": "Adds server-side templates rendering support",
       "symfony/cache": "Adds a cache layer to the application",
       "symfony/dotenv": "Allows to load environment variables from a .env file",
       "symfony/event-dispatcher": "Allows to register symfony's supported listeners and trigger events"
