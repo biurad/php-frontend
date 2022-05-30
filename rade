@@ -44,7 +44,7 @@ if ('self-update' === ($argv[1] ?? false)) {
         throw new RuntimeException('Please install curl and zip extension to self update this application');
     }
 
-    \curl_setopt_array($curl = \curl_init('https://api.github.com/repos/biurad/php-framework/tags'), $context = [
+    \curl_setopt_array($curl = \curl_init('https://api.github.com/repos/biurad/php-frontend/tags'), $context = [
         \CURLOPT_SSL_VERIFYPEER => false,
         \CURLOPT_RETURNTRANSFER => true,
         \CURLOPT_HTTPHEADER => ['Accept: application/vnd.github.v3+json', 'User-Agent: biurad/php-framework'],
